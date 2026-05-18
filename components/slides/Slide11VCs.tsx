@@ -35,11 +35,11 @@ export default function Slide11VCs() {
       <group position={[-3, 1, 0]}>
         <mesh>
           <boxGeometry args={[1.5, 2, 1.5]} />
-          <meshStandardMaterial color="#333" />
+          <meshStandardMaterial color="#737373" />
         </mesh>
         <mesh position={[0, 1.5, 0]}>
           <coneGeometry args={[1, 1, 4]} />
-          <meshStandardMaterial color="#6a1b9a" />
+          <meshStandardMaterial color="#737373" />
         </mesh>
         <Html position={[0, -1.5, 0]} center>
           <div className="bg-black/50 px-2 py-1 rounded text-white font-mono text-sm border border-white/20">University</div>
@@ -50,11 +50,11 @@ export default function Slide11VCs() {
       <group position={[0, -2, 0]}>
         <mesh position={[0, 0, 0]}>
           <cylinderGeometry args={[0.5, 0.8, 1, 16]} />
-          <meshStandardMaterial color="#00e676" />
+          <meshStandardMaterial color="#165D9E" />
         </mesh>
         <mesh position={[0, 0.8, 0]}>
           <sphereGeometry args={[0.5, 32, 32]} />
-          <meshStandardMaterial color="#00e676" />
+          <meshStandardMaterial color="#165D9E" />
         </mesh>
         <Html position={[0, -1, 0]} center>
           <div className="bg-black/50 px-2 py-1 rounded text-white font-mono text-sm border border-white/20">You (Holder)</div>
@@ -65,7 +65,7 @@ export default function Slide11VCs() {
       <group position={[3, 1, 0]}>
         <mesh>
           <boxGeometry args={[1.5, 3, 1.5]} />
-          <meshStandardMaterial color="#0a2540" />
+          <meshStandardMaterial color="#203A5F" />
         </mesh>
         <Html position={[0, -2, 0]} center>
           <div className="bg-black/50 px-2 py-1 rounded text-white font-mono text-sm border border-white/20">Employer (Verifier)</div>
@@ -79,16 +79,16 @@ export default function Slide11VCs() {
         {/* Certificate ribbon */}
         <mesh position={[0.2, -0.1, 0.01]}>
           <circleGeometry args={[0.1, 16]} />
-          <meshBasicMaterial color="#d4af37" />
+          <meshBasicMaterial color="#EAEAEA" />
         </mesh>
       </mesh>
 
       {/* Green Checkmark at Corporate */}
       <mesh ref={checkRef} position={[3, 1, 1]} scale={[0, 0, 0]}>
         <ringGeometry args={[0.3, 0.4, 32]} />
-        <meshBasicMaterial color="#00e676" />
+        <meshBasicMaterial color="#165D9E" />
         <Html position={[0, 0, 0]} center>
-          <div className="text-[#00e676] font-bold text-xl">✓</div>
+          <div className="text-[#165D9E] font-bold text-xl">✓</div>
         </Html>
       </mesh>
     </group>

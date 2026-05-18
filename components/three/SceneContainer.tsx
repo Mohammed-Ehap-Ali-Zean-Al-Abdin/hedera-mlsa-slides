@@ -16,7 +16,7 @@ export function SceneContainer() {
         dpr={[1, 2]} // Support retina displays
         gl={{ antialias: true, alpha: true }}
       >
-        <color attach="background" args={["#0b0d17"]} />
+        <color attach="background" args={["#0f1419"]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         

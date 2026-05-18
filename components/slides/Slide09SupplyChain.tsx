@@ -33,14 +33,14 @@ export default function Slide09SupplyChain() {
       {/* Conveyor Belt */}
       <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[10, 2]} />
-        <meshStandardMaterial color="#222" />
+        <meshStandardMaterial color="#737373" />
       </mesh>
 
       {/* Moving Package */}
       <group ref={packageRef} position={[-4, 0.5, 0]}>
         <mesh>
           <boxGeometry args={[0.8, 0.8, 0.8]} />
-          <meshStandardMaterial color="#8d6e63" />
+          <meshStandardMaterial color="#737373" />
         </mesh>
         {/* QR Code representation */}
         <mesh position={[0, 0, 0.41]}>
@@ -54,11 +54,11 @@ export default function Slide09SupplyChain() {
         <group key={`checkpoint-${i}`} position={[x, 1.5, -1.5]}>
           <mesh>
             <cylinderGeometry args={[0.2, 0.2, 3]} />
-            <meshStandardMaterial color="#555" />
+            <meshStandardMaterial color="#737373" />
           </mesh>
           <mesh position={[0, 1, 0.5]}>
             <boxGeometry args={[0.6, 0.4, 1]} />
-            <meshStandardMaterial color="#6a1b9a" emissive="#6a1b9a" emissiveIntensity={0.5} />
+            <meshStandardMaterial color="#737373" emissive="#737373" emissiveIntensity={0.5} />
           </mesh>
         </group>
       ))}
@@ -70,12 +70,12 @@ export default function Slide09SupplyChain() {
             <group key={`block-${i}`} position={[x, 0, 0]} scale={[0, 0, 0]}>
               <mesh>
                 <boxGeometry args={[1, 1, 1]} />
-                <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.2} />
+                <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.2} />
               </mesh>
               {i > 0 && (
                 <mesh position={[-1, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
                   <cylinderGeometry args={[0.1, 0.1, 1]} />
-                  <meshStandardMaterial color="#00e676" />
+                  <meshStandardMaterial color="#165D9E" />
                 </mesh>
               )}
             </group>

@@ -23,10 +23,10 @@ export default function Slide20HCS() {
         const stamp = packet.children[1] as THREE.Mesh;
         if (xPos > 0) {
           stamp.scale.lerp(new THREE.Vector3(1, 1, 1), 0.2); // Show stamp
-          ((packet.children[0] as THREE.Mesh).material as THREE.MeshStandardMaterial).color.setHex(0x00e676); // Turn green
+          ((packet.children[0] as THREE.Mesh).material as THREE.MeshStandardMaterial).color.setHex(0x165D9E); // Turn green
         } else {
           stamp.scale.set(0, 0, 0); // Hide stamp
-          ((packet.children[0] as THREE.Mesh).material as THREE.MeshStandardMaterial).color.setHex(0x6a1b9a); // Purple before timestamp
+          ((packet.children[0] as THREE.Mesh).material as THREE.MeshStandardMaterial).color.setHex(0x737373); // Purple before timestamp
         }
       });
     }
@@ -37,11 +37,11 @@ export default function Slide20HCS() {
       {/* High-Speed Bus */}
       <mesh ref={busRef} position={[0, 0, -1]}>
         <boxGeometry args={[12, 1, 3]} />
-        <meshStandardMaterial color="#111" />
+        <meshStandardMaterial color="#737373" />
         {/* Glow lines on bus */}
         <mesh position={[0, 0.51, 0]}>
           <planeGeometry args={[12, 0.1]} />
-          <meshBasicMaterial color="#00bcd4" />
+          <meshBasicMaterial color="#165D9E" />
         </mesh>
       </mesh>
 
@@ -49,17 +49,17 @@ export default function Slide20HCS() {
       <group position={[0, 2, 0]}>
         <mesh position={[0, 0, 0]}>
           <cylinderGeometry args={[1, 1, 1, 16]} />
-          <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.2} />
+          <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.2} />
         </mesh>
         <Html position={[0, 1.5, 0]} center>
-          <div className="bg-black/80 px-2 py-1 rounded text-white font-mono text-sm border border-[#00e676]">
+          <div className="bg-black/80 px-2 py-1 rounded text-white font-mono text-sm border border-[#165D9E]">
             Fair Timestamp
           </div>
         </Html>
         {/* Laser hitting the bus */}
         <mesh position={[0, -1, 0]}>
           <cylinderGeometry args={[0.05, 0.05, 2]} />
-          <meshBasicMaterial color="#00e676" transparent opacity={0.5} />
+          <meshBasicMaterial color="#165D9E" transparent opacity={0.5} />
         </mesh>
       </group>
 
@@ -70,7 +70,7 @@ export default function Slide20HCS() {
             {/* Base packet */}
             <mesh>
               <boxGeometry args={[0.8, 0.4, 0.8]} />
-              <meshStandardMaterial color="#6a1b9a" />
+              <meshStandardMaterial color="#737373" />
             </mesh>
             {/* Timestamp Stamp */}
             <mesh position={[0, 0.21, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0, 0, 0]}>

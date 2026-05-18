@@ -56,14 +56,14 @@ export default function Slide14PoW() {
     <group>
       {/* Background Heat/Smoke indicating energy waste */}
       <group position={[0, 0, -3]}>
-        <ParticleField count={200} color="#ff5722" speed={3} spread={8} size={0.15} />
+        <ParticleField count={200} color="#737373" speed={3} spread={8} size={0.15} />
       </group>
 
       {/* Info Label */}
       <Html position={[0, 3.5, 0]} center>
-        <div className="bg-black/80 px-4 py-2 rounded text-white font-bold border border-red-500 whitespace-nowrap text-center">
+        <div className="bg-black/80 px-4 py-2 rounded text-white font-bold border border-[#737373] whitespace-nowrap text-center">
           Massive Energy Consumption <br/>
-          <span className="text-sm font-normal text-red-400">All nodes race to solve a useless math puzzle</span>
+          <span className="text-sm font-normal text-[#737373]">All nodes race to solve a useless math puzzle</span>
         </div>
       </Html>
 
@@ -74,13 +74,13 @@ export default function Slide14PoW() {
             <mesh>
               <cylinderGeometry args={[0.8, 0.8, 0.2, 12]} />
               <meshStandardMaterial 
-                color={winner === i ? "#00e676" : "#555"} 
+                color={winner === i ? "#165D9E" : "#737373"} 
                 metalness={0.8} 
               />
             </mesh>
             <Html position={[0, -1.2, 0]} center>
               <div className={`px-2 py-1 rounded text-sm font-mono whitespace-nowrap transition-colors ${
-                winner === i ? "bg-[#00e676] text-black font-bold" : "bg-black/50 text-white/50"
+                winner === i ? "bg-[#165D9E] text-black font-bold" : "bg-black/50 text-white/50"
               }`}>
                 {winner === i ? "Winner! Found Hash" : "Hashing..."}
               </div>
@@ -92,14 +92,14 @@ export default function Slide14PoW() {
       {/* New Block dropping */}
       <mesh ref={blockRef} position={[0, 3, 0]}>
         <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.5} transparent opacity={0} />
+        <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.5} transparent opacity={0} />
       </mesh>
 
       {/* Existing Blockchain */}
       <group position={[0, -2, 0]}>
         <mesh position={[-1.5, 0, 0]}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#0a2540" />
+          <meshStandardMaterial color="#203A5F" />
         </mesh>
         <mesh position={[-0.5, 0, 0]} rotation={[0, 0, Math.PI/2]}>
           <cylinderGeometry args={[0.1, 0.1, 1]} />
@@ -107,7 +107,7 @@ export default function Slide14PoW() {
         </mesh>
         <mesh position={[1.5, 0, 0]}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#0a2540" />
+          <meshStandardMaterial color="#203A5F" />
         </mesh>
         <mesh position={[0.5, 0, 0]} rotation={[0, 0, Math.PI/2]}>
           <cylinderGeometry args={[0.1, 0.1, 1]} />

@@ -75,7 +75,7 @@ export default function Slide12Session2() {
     <group>
       <instancedMesh ref={pointsRef} args={[undefined, undefined, count]}>
         <sphereGeometry args={[1, 8, 8]} />
-        <meshStandardMaterial color="#6a1b9a" emissive="#00e676" emissiveIntensity={0.8} />
+        <meshStandardMaterial color="#737373" emissive="#165D9E" emissiveIntensity={0.8} />
       </instancedMesh>
     </group>
   );

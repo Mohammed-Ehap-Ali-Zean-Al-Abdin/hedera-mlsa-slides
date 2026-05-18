@@ -29,10 +29,10 @@ export default function Slide23ConsensusVsMirror() {
       <group position={[0, 0, 0]}>
         <mesh rotation={[Math.PI/2, 0, 0]}>
           <torusGeometry args={[1.5, 0.2, 16, 64]} />
-          <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.3} />
+          <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.3} />
         </mesh>
         <Html position={[0, 2, 0]} center>
-          <div className="bg-black/80 px-4 py-2 rounded text-[#00e676] font-bold border border-[#00e676] text-center w-48">
+          <div className="bg-black/80 px-4 py-2 rounded text-[#165D9E] font-bold border border-[#165D9E] text-center w-48">
             Consensus Network<br/>
             <span className="text-sm font-normal text-white/70">(Write-only)</span>
           </div>
@@ -44,7 +44,7 @@ export default function Slide23ConsensusVsMirror() {
         {[0, 1, 2, 3].map((i) => (
           <mesh key={i}>
             <sphereGeometry args={[0.15, 16, 16]} />
-            <meshBasicMaterial color="#00bcd4" transparent />
+            <meshBasicMaterial color="#165D9E" transparent />
           </mesh>
         ))}
       </group>
@@ -58,15 +58,15 @@ export default function Slide23ConsensusVsMirror() {
           <group key={`mirror-${i}`} position={[x, 0, z]}>
             <mesh>
               <cylinderGeometry args={[0.8, 0.8, 1.5, 16]} />
-              <meshStandardMaterial color="#0a2540" />
+              <meshStandardMaterial color="#203A5F" />
             </mesh>
             {/* Database rings */}
-            <mesh position={[0, 0.3, 0]}><cylinderGeometry args={[0.82, 0.82, 0.1, 16]} /><meshStandardMaterial color="#00bcd4" /></mesh>
-            <mesh position={[0, -0.3, 0]}><cylinderGeometry args={[0.82, 0.82, 0.1, 16]} /><meshStandardMaterial color="#00bcd4" /></mesh>
+            <mesh position={[0, 0.3, 0]}><cylinderGeometry args={[0.82, 0.82, 0.1, 16]} /><meshStandardMaterial color="#165D9E" /></mesh>
+            <mesh position={[0, -0.3, 0]}><cylinderGeometry args={[0.82, 0.82, 0.1, 16]} /><meshStandardMaterial color="#165D9E" /></mesh>
             
             {i === 0 && (
               <Html position={[0, -1.5, 0]} center>
-                <div className="bg-black/80 px-4 py-2 rounded text-[#00bcd4] font-bold border border-[#00bcd4] text-center w-32">
+                <div className="bg-black/80 px-4 py-2 rounded text-[#165D9E] font-bold border border-[#165D9E] text-center w-32">
                   Mirror Node<br/>
                   <span className="text-sm font-normal text-white/70">(Read-only)</span>
                 </div>

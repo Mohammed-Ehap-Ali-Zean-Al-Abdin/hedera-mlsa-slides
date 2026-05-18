@@ -23,8 +23,8 @@ interface NetworkGraphProps {
 export function NetworkGraph({
   nodes,
   edges,
-  nodeColor = "#00e676",
-  edgeColor = "#6a1b9a",
+  nodeColor = "#165D9E",
+  edgeColor = "#737373",
   autoRotate = true,
 }: NetworkGraphProps) {
   const groupRef = useRef<THREE.Group>(null);

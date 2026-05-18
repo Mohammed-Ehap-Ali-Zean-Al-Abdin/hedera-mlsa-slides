@@ -55,9 +55,9 @@ export default function Slide15PoS() {
     <group>
       {/* Title / Explainer Label */}
       <Html position={[0, 3.5, 0]} center>
-        <div className="bg-black/80 px-4 py-2 rounded text-white font-bold border border-[#00bcd4] whitespace-nowrap text-center">
+        <div className="bg-black/80 px-4 py-2 rounded text-white font-bold border border-[#165D9E] whitespace-nowrap text-center">
           Energy Efficient, but creates a Bottleneck <br/>
-          <span className="text-sm font-normal text-[#00bcd4]">One leader chosen at a time to process all data</span>
+          <span className="text-sm font-normal text-[#165D9E]">One leader chosen at a time to process all data</span>
         </div>
       </Html>
 
@@ -67,14 +67,14 @@ export default function Slide15PoS() {
           <mesh>
             <cylinderGeometry args={[0.6, 0.6, 0.5, 32]} />
             <meshStandardMaterial 
-              color={leader === v.id ? "#00e676" : "#0a2540"} 
-              emissive={leader === v.id ? "#00e676" : "#000000"} 
+              color={leader === v.id ? "#165D9E" : "#203A5F"} 
+              emissive={leader === v.id ? "#165D9E" : "#000000"} 
               emissiveIntensity={0.5} 
             />
           </mesh>
           <Html position={[0, 1, 0]} center>
             <div className={`px-2 py-1 rounded text-sm font-bold whitespace-nowrap transition-colors ${
-              leader === v.id ? "bg-[#00e676] text-black" : "bg-black/50 text-white/50"
+              leader === v.id ? "bg-[#165D9E] text-black" : "bg-black/50 text-white/50"
             }`}>
               {leader === v.id ? "★ Current Leader" : "Validator"}
             </div>
@@ -84,11 +84,11 @@ export default function Slide15PoS() {
           {[...Array(v.stake)].map((_, i) => (
             <mesh key={i} position={[0, -0.5 - i * 0.15, 0]}>
               <cylinderGeometry args={[0.4, 0.4, 0.1, 16]} />
-              <meshStandardMaterial color="#ffd700" metalness={0.8} />
+              <meshStandardMaterial color="#EAEAEA" metalness={0.8} />
             </mesh>
           ))}
           <Html position={[0, -0.5 - v.stake * 0.15 - 0.5, 0]} center>
-            <div className="text-yellow-500 font-mono text-xs">{v.stake}k Staked</div>
+            <div className="text-[#EAEAEA] font-mono text-xs">{v.stake}k Staked</div>
           </Html>
         </group>
       ))}
@@ -98,13 +98,13 @@ export default function Slide15PoS() {
         {[...Array(5)].map((_, i) => (
           <mesh key={i}>
             <sphereGeometry args={[0.2, 16, 16]} />
-            <meshStandardMaterial color="#6a1b9a" emissive="#6a1b9a" emissiveIntensity={0.5} />
+            <meshStandardMaterial color="#737373" emissive="#737373" emissiveIntensity={0.5} />
           </mesh>
         ))}
       </group>
       
       <Html position={[-4, -2.5, 0]} center>
-        <div className="text-purple-400 font-mono text-sm whitespace-nowrap">
+        <div className="text-[#165D9E] font-mono text-sm whitespace-nowrap">
           User Transactions
         </div>
       </Html>

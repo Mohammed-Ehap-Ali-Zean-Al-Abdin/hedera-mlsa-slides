@@ -57,20 +57,20 @@ export default function Slide27QA() {
         {/* Core Sphere */}
         <mesh>
           <sphereGeometry args={[2.45, 64, 64]} />
-          <meshStandardMaterial color="#0a2540" metalness={0.5} roughness={0.8} />
+          <meshStandardMaterial color="#203A5F" metalness={0.5} roughness={0.8} />
         </mesh>
 
         {/* Nodes */}
         {nodes.map((pos, i) => (
           <mesh key={i} position={pos as [number, number, number]}>
             <sphereGeometry args={[0.05, 8, 8]} />
-            <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.8} />
+            <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.8} />
           </mesh>
         ))}
 
         {/* Edges */}
         <lineSegments geometry={lineGeometry}>
-          <lineBasicMaterial color="#00bcd4" transparent opacity={0.15} />
+          <lineBasicMaterial color="#165D9E" transparent opacity={0.15} />
         </lineSegments>
       </group>
     </group>

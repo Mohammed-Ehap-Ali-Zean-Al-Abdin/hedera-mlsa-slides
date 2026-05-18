@@ -26,10 +26,10 @@ export default function Slide13ConsensusProblem() {
         if (phase < 6) {
           // Disagreement
           const flash = Math.sin(t * 10 + i) > 0;
-          (mesh.material as THREE.MeshStandardMaterial).color.setHex(flash ? 0xff1744 : 0xffc107); // Red / Yellow
+          (mesh.material as THREE.MeshStandardMaterial).color.setHex(flash ? 0x737373 : 0xEAEAEA); // Red / Yellow
         } else {
           // Consensus
-          (mesh.material as THREE.MeshStandardMaterial).color.setHex(0x00e676); // Green
+          (mesh.material as THREE.MeshStandardMaterial).color.setHex(0x165D9E); // Green
         }
       });
     }
@@ -61,7 +61,7 @@ export default function Slide13ConsensusProblem() {
       {/* Center piece */}
       <mesh>
         <torusGeometry args={[0.5, 0.1, 16, 32]} />
-        <meshStandardMaterial color="#6a1b9a" />
+        <meshStandardMaterial color="#737373" />
       </mesh>
     </group>
   );

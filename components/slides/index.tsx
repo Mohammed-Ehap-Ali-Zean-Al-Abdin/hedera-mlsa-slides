@@ -33,7 +33,7 @@ export function PlaceholderSlide({ children }: { children?: ReactNode }) {
   return (
     <mesh>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="#00e676" />
+      <meshStandardMaterial color="#165D9E" />
       {children}
     </mesh>
   );

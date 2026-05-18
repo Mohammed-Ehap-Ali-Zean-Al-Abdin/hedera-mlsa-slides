@@ -42,7 +42,7 @@ export default function PresentationPage() {
   }, [goNext, goPrev, toggleFullscreen]);
 
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-background text-foreground">
+    <main className="relative w-screen h-screen overflow-hidden bg-[#203A5F] text-foreground">
       <ProgressBar />
       <SceneContainer />
       <SlideOverlay />

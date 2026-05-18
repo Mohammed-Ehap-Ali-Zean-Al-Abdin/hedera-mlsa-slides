@@ -28,15 +28,15 @@ export default function Slide21HCSIoT() {
       <group position={[0, -2.5, 0]}>
         <mesh position={[0, 0, 0]}>
           <cylinderGeometry args={[0.8, 1, 1]} />
-          <meshStandardMaterial color="#555" />
+          <meshStandardMaterial color="#737373" />
         </mesh>
         <mesh position={[0, 1, 0]}>
           <cylinderGeometry args={[0.1, 0.1, 1]} />
-          <meshStandardMaterial color="#888" />
+          <meshStandardMaterial color="#EAEAEA" />
         </mesh>
         <mesh position={[0, 1.5, 0]}>
           <sphereGeometry args={[0.2, 16, 16]} />
-          <meshStandardMaterial color="#ff1744" emissive="#ff1744" emissiveIntensity={0.5} />
+          <meshStandardMaterial color="#737373" emissive="#737373" emissiveIntensity={0.5} />
         </mesh>
         <Html position={[2, 0, 0]} center>
           <div className="bg-black/50 px-2 py-1 rounded border border-white/20 text-white font-mono text-sm whitespace-nowrap">
@@ -49,10 +49,10 @@ export default function Slide21HCSIoT() {
       <group position={[0, 2.5, 0]}>
         <mesh>
           <boxGeometry args={[6, 1, 2]} />
-          <meshStandardMaterial color="#00bcd4" transparent opacity={0.3} />
+          <meshStandardMaterial color="#165D9E" transparent opacity={0.3} />
         </mesh>
         <Html position={[0, 1.2, 0]} center>
-          <div className="text-[#00bcd4] font-bold font-mono">Hedera Consensus Service</div>
+          <div className="text-[#165D9E] font-bold font-mono">Hedera Consensus Service</div>
         </Html>
       </group>
 
@@ -63,7 +63,7 @@ export default function Slide21HCSIoT() {
             <planeGeometry args={[0.1, 0.1]} />
             <meshBasicMaterial color="#ffffff" transparent opacity={0} />
             <Html center>
-              <div className="bg-[#00e676]/20 px-2 py-1 rounded text-[#00e676] font-mono text-xs whitespace-nowrap">
+              <div className="bg-[#165D9E]/20 px-2 py-1 rounded text-[#165D9E] font-mono text-xs whitespace-nowrap">
                 {`Temp: ${temps[i]}°C -> HCS`}
               </div>
             </Html>

@@ -40,13 +40,13 @@ export default function Slide04Web3() {
         {[...Array(10)].map((_, i) => (
           <mesh key={i} position={[(Math.random()-0.5)*4, (Math.random()-0.5)*4, (Math.random()-0.5)*4]}>
             <boxGeometry args={[0.5, 0.5, 0.5]} />
-            <meshStandardMaterial color="#333" transparent opacity={0.5} />
+            <meshStandardMaterial color="#737373" transparent opacity={0.5} />
           </mesh>
         ))}
       </group>
 
       {/* P2P Network connecting users */}
-      <NetworkGraph nodes={nodes} edges={edges} nodeColor="#00e676" edgeColor="#00e676" autoRotate={false} />
+      <NetworkGraph nodes={nodes} edges={edges} nodeColor="#165D9E" edgeColor="#165D9E" autoRotate={false} />
 
       {/* Users holding Data Cubes */}
       {nodes.map((node, i) => (
@@ -54,16 +54,16 @@ export default function Slide04Web3() {
           {/* User representation */}
           <mesh position={[0, -0.5, 0]}>
             <cylinderGeometry args={[0.3, 0.4, 0.8, 16]} />
-            <meshStandardMaterial color="#6a1b9a" />
+            <meshStandardMaterial color="#737373" />
           </mesh>
           <mesh position={[0, 0.2, 0]}>
             <sphereGeometry args={[0.3, 16, 16]} />
-            <meshStandardMaterial color="#6a1b9a" />
+            <meshStandardMaterial color="#737373" />
           </mesh>
           {/* Glowing Data Cube */}
           <mesh position={[0.5, 0, 0.5]}>
             <icosahedronGeometry args={[0.2]} />
-            <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.8} />
+            <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.8} />
           </mesh>
         </group>
       ))}

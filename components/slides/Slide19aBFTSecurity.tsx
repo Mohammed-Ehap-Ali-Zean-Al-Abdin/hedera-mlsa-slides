@@ -52,18 +52,18 @@ export default function Slide19aBFTSecurity() {
       <group>
         <mesh>
           <sphereGeometry args={[1, 16, 16]} />
-          <meshStandardMaterial color="#00e676" />
+          <meshStandardMaterial color="#165D9E" />
         </mesh>
-        <mesh position={[-1, 0.5, 1]}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#00e676" /></mesh>
-        <mesh position={[1, -0.5, -1]}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#00e676" /></mesh>
+        <mesh position={[-1, 0.5, 1]}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#165D9E" /></mesh>
+        <mesh position={[1, -0.5, -1]}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#165D9E" /></mesh>
       </group>
 
       {/* aBFT Shield */}
       <mesh ref={shieldRef}>
         <icosahedronGeometry args={[2.2, 1]} />
         <meshStandardMaterial 
-          color="#00bcd4" 
-          emissive="#00bcd4" 
+          color="#165D9E" 
+          emissive="#165D9E" 
           transparent 
           opacity={0.2} 
           wireframe
@@ -75,7 +75,7 @@ export default function Slide19aBFTSecurity() {
         {[0, 1, 2].map((i) => (
           <mesh key={i}>
             <octahedronGeometry args={[0.4]} />
-            <meshStandardMaterial color="#ff1744" emissive="#ff1744" emissiveIntensity={0.8} />
+            <meshStandardMaterial color="#737373" emissive="#737373" emissiveIntensity={0.8} />
           </mesh>
         ))}
       </group>

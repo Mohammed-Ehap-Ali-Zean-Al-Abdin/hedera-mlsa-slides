@@ -26,8 +26,8 @@ export function SlideOverlay() {
               <span
                 className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                   slide.session === 1
-                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-                    : "bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                    ? "bg-[#165D9E]/20 text-[#165D9E] border border-[#165D9E]/30"
+                    : "bg-[#165D9E]/20 text-[#165D9E] border border-[#165D9E]/30"
                 }`}
               >
                 Session {slide.session}
@@ -40,7 +40,7 @@ export function SlideOverlay() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 tracking-tight">
               {slide.title}
             </h1>
-            <p className="text-lg md:text-2xl text-[#00e676] font-light">
+            <p className="text-lg md:text-2xl text-[#165D9E] font-light">
               {slide.subtitle}
             </p>
           </div>
@@ -57,7 +57,7 @@ export function SlideOverlay() {
                     transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
                     className="flex items-start gap-4 text-white/90 text-xl leading-relaxed"
                   >
-                    <CheckCircle2 className="mt-1 flex-shrink-0 text-[#00e676]" size={24} />
+                    <CheckCircle2 className="mt-1 flex-shrink-0 text-[#165D9E]" size={24} />
                     <span>{bullet}</span>
                   </motion.li>
                 ))}

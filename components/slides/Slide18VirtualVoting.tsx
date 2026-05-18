@@ -18,10 +18,10 @@ export default function Slide18VirtualVoting() {
         <group key={i} position={node.pos as [number, number, number]}>
           <mesh>
             <sphereGeometry args={[0.5, 32, 32]} />
-            <meshStandardMaterial color="#0a2540" />
+            <meshStandardMaterial color="#203A5F" />
           </mesh>
           <Html position={[0, 1, 0]} center>
-            <div className="animate-bounce bg-black/50 text-[#00e676] font-mono text-2xl px-2 py-1 rounded-full border border-[#00e676]/50">
+            <div className="animate-bounce bg-black/50 text-[#165D9E] font-mono text-2xl px-2 py-1 rounded-full border border-[#165D9E]/50">
               {node.symbol}
             </div>
           </Html>
@@ -30,7 +30,7 @@ export default function Slide18VirtualVoting() {
 
       {/* Center Checkmark (Result of virtual voting) */}
       <Html position={[0, -2, 0]} center>
-        <div className="bg-[#00e676] text-black font-bold text-4xl w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_20px_#00e676]">
+        <div className="bg-[#165D9E] text-black font-bold text-4xl w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_20px_#165D9E]">
           ✓
         </div>
       </Html>

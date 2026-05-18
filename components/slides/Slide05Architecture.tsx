@@ -36,12 +36,12 @@ export default function Slide05Architecture() {
     <group>
       {/* Centralized (Left) */}
       <group position={[-3.5, 0, 0]}>
-        <NetworkGraph nodes={hubNodes} edges={hubEdges} nodeColor="#ff1744" edgeColor="#ff1744" autoRotate={false} />
+        <NetworkGraph nodes={hubNodes} edges={hubEdges} nodeColor="#737373" edgeColor="#737373" autoRotate={false} />
       </group>
 
       {/* Distributed (Right) */}
       <group position={[3.5, 0, 0]}>
-        <NetworkGraph nodes={meshNodes} edges={meshEdges} nodeColor="#00e676" edgeColor="#00e676" autoRotate={false} />
+        <NetworkGraph nodes={meshNodes} edges={meshEdges} nodeColor="#165D9E" edgeColor="#165D9E" autoRotate={false} />
       </group>
 
       {/* Separator */}

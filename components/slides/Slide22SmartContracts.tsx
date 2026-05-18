@@ -34,34 +34,34 @@ export default function Slide22SmartContracts() {
       <group ref={armBaseRef} position={[-2, -2, 0]}>
         <mesh position={[0, 0.5, 0]}>
           <cylinderGeometry args={[0.6, 0.8, 1]} />
-          <meshStandardMaterial color="#333" metalness={0.8} />
+          <meshStandardMaterial color="#737373" metalness={0.8} />
         </mesh>
         
         {/* First Arm Segment */}
         <group position={[0, 1, 0]} rotation={[0, 0, 0.5]}>
           <mesh position={[0, 1, 0]}>
             <cylinderGeometry args={[0.2, 0.2, 2]} />
-            <meshStandardMaterial color="#e0e0e0" metalness={0.8} />
+            <meshStandardMaterial color="#EAEAEA" metalness={0.8} />
           </mesh>
           
           {/* Second Arm Segment (Joint) */}
           <group ref={armJointRef} position={[0, 2, 0]}>
             <mesh position={[0, 0, 0]} rotation={[Math.PI/2, 0, 0]}>
               <cylinderGeometry args={[0.3, 0.3, 0.6]} />
-              <meshStandardMaterial color="#6a1b9a" />
+              <meshStandardMaterial color="#737373" />
             </mesh>
             <mesh position={[1, 0, 0]} rotation={[0, 0, Math.PI/2]}>
               <cylinderGeometry args={[0.15, 0.15, 2]} />
-              <meshStandardMaterial color="#e0e0e0" metalness={0.8} />
+              <meshStandardMaterial color="#EAEAEA" metalness={0.8} />
             </mesh>
             {/* Claws */}
             <mesh position={[2, -0.2, 0.2]}>
               <boxGeometry args={[0.4, 0.1, 0.1]} />
-              <meshStandardMaterial color="#ff1744" />
+              <meshStandardMaterial color="#737373" />
             </mesh>
             <mesh position={[2, 0.2, 0.2]}>
               <boxGeometry args={[0.4, 0.1, 0.1]} />
-              <meshStandardMaterial color="#ff1744" />
+              <meshStandardMaterial color="#737373" />
             </mesh>
           </group>
         </group>
@@ -71,21 +71,21 @@ export default function Slide22SmartContracts() {
       <group position={[2, -2, 0]}>
         <mesh position={[0, 0.1, 0]}>
           <boxGeometry args={[3, 0.2, 3]} />
-          <meshStandardMaterial color="#0a2540" />
+          <meshStandardMaterial color="#203A5F" />
         </mesh>
         {/* Existing Code Blocks */}
         <mesh position={[-0.5, 0.5, -0.5]}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.2} />
+          <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.2} />
         </mesh>
         <mesh position={[0.5, 0.5, 0.5]}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.2} />
+          <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.2} />
         </mesh>
         {/* New Block Being Assembled */}
         <mesh ref={blockRef} position={[-0.5, 2, 0.5]}>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.5} transparent opacity={1} />
+          <meshStandardMaterial color="#165D9E" emissive="#165D9E" emissiveIntensity={0.5} transparent opacity={1} />
         </mesh>
       </group>
     </group>

@@ -39,14 +39,15 @@ export default function Slide14PoW() {
     }
 
     if (blockRef.current) {
+      const material = blockRef.current.material as THREE.Material;
       if (winner !== null) {
         // Drop block into chain
         blockRef.current.position.y = THREE.MathUtils.lerp(blockRef.current.position.y, -1, 0.1);
-        blockRef.current.material.opacity = THREE.MathUtils.lerp(blockRef.current.material.opacity, 1, 0.1);
+        material.opacity = THREE.MathUtils.lerp(material.opacity, 1, 0.1);
       } else {
         // Reset block above miners
         blockRef.current.position.y = 3;
-        blockRef.current.material.opacity = 0;
+        material.opacity = 0;
       }
     }
   });
@@ -89,7 +90,7 @@ export default function Slide14PoW() {
       </group>
 
       {/* New Block dropping */}
-      <mesh ref={blockRef} position={[0, 3, 0]} transparent>
+      <mesh ref={blockRef} position={[0, 3, 0]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="#00e676" emissive="#00e676" emissiveIntensity={0.5} transparent opacity={0} />
       </mesh>
